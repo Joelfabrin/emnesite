@@ -22,10 +22,9 @@
   padding: 2rem;
 }
 
-h1 {
-  margin: 0 0 0.5rem 0;
-}
-p {
-  margin: 0;
-  color: #333;
+.forsidebaggrund {
+  background-image: url(/icons\ copy/kopper.png);
+  background-size: cover; /* make it fill the screen */
+  background-repeat: repeat; /* don’t tile the image */
+  background-position: center; /* center the image */
 }
