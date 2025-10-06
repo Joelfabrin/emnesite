@@ -1,0 +1,31 @@
+:root {
+  --blue-rgb: 124, 157, 210;
+  --stripe-opacity: 0.3;
+  --stripe-size: 24px;
+  --angle: 90deg;
+  --bg-fallback: #f6f9ff;
+}
+
+.striped-bg {
+  min-height: 100vh;
+  background-color: var(--bg-fallback);
+  background-image: repeating-linear-gradient(
+    var(--angle),
+    rgba(var(--blue-rgb), var(--stripe-opacity)) 0,
+    rgba(var(--blue-rgb), var(--stripe-opacity)) calc(var(--stripe-size) / 2),
+    transparent calc(var(--stripe-size) / 2),
+    transparent var(--stripe-size)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+h1 {
+  margin: 0 0 0.5rem 0;
+}
+p {
+  margin: 0;
+  color: #333;
+}
