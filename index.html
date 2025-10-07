@@ -2,17 +2,40 @@
 <html lang="da">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="forside.css" />
     <link rel="stylesheet" href="baggrund.css" />
-    <title>EMNESITE</title>
+    <link rel="stylesheet" href="generel.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon_io/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon_io/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon_io/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/favicon_io/android-chrome-512x512.png" />
+    <title>FORSIDE</title>
   </head>
   <body>
     <header>
+      <div class="logo">
+        <a href="/">
+          <img src="/icons copy/HEAT.png" alt="Logo" />
+        </a>
+      </div>
       <nav>
-        f
-        <ul>
-          <li><a href="index.html">FORSIDE</a></li>
+        <ul class="menu">
           <li><a href="osterbro.html">ØSTERBRO</a></li>
           <li><a href="vesterbro.html">VESTERBRO</a></li>
           <li><a href="norrebro.html">NØRREBRO</a></li>
@@ -21,14 +44,81 @@
       </nav>
     </header>
     <main>
-      <section>
-        <div>
-          <h1>HEAT</h1>
-          <p></p>
+      <section class="intro">
+        <h2>HVEM ER VI?</h2>
+        <p>
+          HEAT er din guide til at skabe magiske øjeblikke og uforglemmelige
+          første dates i hjertet af København. Her finder du inspiration til
+          byens skjulte perler – fra stemningsfulde restauranter og charmerende
+          vinbarer til unikke oplevelser og romantiske aktiviteter.
+        </p>
+        <p>
+          Uanset om du drømmer om en intim middag, en hyggelig gåtur gennem
+          byens historiske gader eller en oplevelse, der giver sommerfugle i
+          maven, hjælper HEAT dig med at gøre din date helt særlig.
+        </p>
+
+        <div class="kyskaffe">
+          <img src="/icons copy/KYS OG KAFFE.png" alt="kyskaffe" />
         </div>
       </section>
     </main>
-    <footer></footer>
+    <footer class="site-footer">
+      <div class="footer-inner container">
+        <!-- Venstre kolonne -->
+        <section class="footer-col footer-lead">
+          <h3>Planlæg din perfekte date:</h3>
+
+          <p><strong>Titel:</strong> Planlæg den perfekte første date</p>
+          <p><strong>Som:</strong> en ung/voksen, der vil imponere sin date,</p>
+          <p>
+            <strong>vil jeg:</strong> have inspiration og konkrete forslag til
+            restauranter, vinbarer og oplevelser /aktiviteter i København,
+          </p>
+          <p>
+            <strong>så jeg:</strong> kan sammensætte en romantisk aften uden
+            stress og med den helt rigtige stemning.
+          </p>
+        </section>
+
+        <!-- Midterkolonner -->
+        <section class="footer-col">
+          <h4>Virksomhed</h4>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </section>
+
+        <section class="footer-col">
+          <h4>Hjælp</h4>
+          <ul>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Terms &amp; Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </section>
+
+        <!-- Højre kolonne -->
+        <section class="footer-col footer-news">
+          <h4>Nyhedsbrev</h4>
+          <form class="newsletter" action="#" method="post">
+            <label for="newsletter-email" class="visually-hidden"
+              >Din e-mail</label
+            >
+            <input
+              id="newsletter-email"
+              type="email"
+              placeholder="enter your email address"
+              required
+            />
+            <button type="submit">Tilmeld dig nyhedsbrev</button>
+          </form>
+        </section>
+      </div>
+    </footer>
+    <script src="menu.js"></script>
     <body class="forsidebaggrund"></body>
   </body>
 </html>
