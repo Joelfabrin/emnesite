@@ -24,37 +24,125 @@
       sizes="16x16"
       href="/favicon_io/favicon-16x16.png"
     />
-    <link rel="manifest" href="/favicon_io/android-chrome-512x512.png" />
-    <title>ØSTERBRO</title>
+    <link rel="manifest" href="/favicon_io/site.webmanifest" />
+    <!-- /******* FONT ******/ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kirang+Haerang&display=swap"
+      rel="stylesheet"
+    />
+    <!-- /******* FONT ******/ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap"
+      rel="stylesheet"
+    />
+    <!-- /******* FONT ******/ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap"
+      rel="stylesheet"
+    />
+    <title>HEAT - ØSTERBRO</title>
   </head>
-  <body>
-    <header>
-      <div class="logo">
-        <a href="/">
-          <img src="/icons copy/HEAT.png" alt="Logo" />
+  <body class="striped-bg">
+    <header class="site-header">
+      <div class="site-header_inner">
+        <a class="logo" href="index.html">
+          <h1>HEAT</h1>
         </a>
-      </div>
-      <nav>
-        <ul class="menu_osterbro">
-          <li><a href="osterbro.html">ØSTERBRO</a></li>
-          <li><a href="vesterbro.html">VESTERBRO</a></li>
-          <li><a href="norrebro.html">NØRREBRO</a></li>
-          <li><a href="frederiksberg.html">FREDERIKSBERG</a></li>
-        </ul>
-      </nav>
-    </header>
-    <main>
-      <section>
-        <div>
-          <h1></h1>
-          <p></p>
-        </div>
-        <img src="" alt="" />
-      </section>
 
-      <section class=""></section>
-      <div class="striped-bg"></div>
+        <nav>
+          <span class="blaakaffe">
+            <img src="/icons copy/blaakaffe.png" alt="" />
+          </span>
+          <a href="vesterbro.html">Vesterbro</a>
+          <a href="norrebro.html">Nørrebro</a>
+          <a href="frederiksberg.html">Frederiksberg</a>
+        </nav>
+      </div>
+    </header>
+    <main class="ob-container">
+      <h1 class="ob-title">ØSTERBRO</h1>
+
+      <div class="ob-card">
+        <p>
+          Østerbro er en af Københavns mest charmerende og elegante bydele, hvor
+          brede boulevarder, grønne parker og nærheden til vandet skaber en
+          rolig og romantisk stemning.
+        </p>
+        <p>
+          Her kan man slentre hånd i hånd langs Søerne eller tage en pause i
+          Fælledparken under gamle trækroner. Små caféer og hyggelige
+          restauranter ligger side om side med klassiske bygninger, og hele
+          området emmer af en stille, men levende atmosfære – perfekt til en
+          kærlig gåtur eller en afslappet dag sammen.
+        </p>
+      </div>
+
+      <nav class="ob-links">
+        <a href="#aktiviteter">AKTIVITETER</a>
+        <a href="#restauranter">RESTAURANTER</a>
+        <a href="#vinbar">VINBAR</a>
+      </nav>
     </main>
-    <footer></footer>
+    <footer class="site-footer">
+      <div class="footer-inner container">
+        <!-- Venstre kolonne -->
+        <section class="footer-col footer-lead">
+          <h3>Planlæg din perfekte date:</h3>
+
+          <p><strong>Titel:</strong> Planlæg den perfekte første date</p>
+          <p><strong>Som:</strong> en ung/voksen, der vil imponere sin date,</p>
+          <p>
+            <strong>vil jeg:</strong> have inspiration og konkrete forslag til
+            restauranter, vinbarer og oplevelser /aktiviteter i København,
+          </p>
+          <p>
+            <strong>så jeg:</strong> kan sammensætte en romantisk aften uden
+            stress og med den helt rigtige stemning.
+          </p>
+        </section>
+
+        <!-- Midterkolonner -->
+        <section class="footer-col">
+          <h4>Virksomhed</h4>
+          <ul>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Features</a></li>
+            <li><a href="#">FAQ</a></li>
+          </ul>
+        </section>
+
+        <section class="footer-col">
+          <h4>Hjælp</h4>
+          <ul>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Terms &amp; Conditions</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+          </ul>
+        </section>
+
+        <!-- Højre kolonne -->
+        <section class="footer-col footer-news">
+          <h4>Nyhedsbrev</h4>
+          <form class="newsletter" action="#" method="post">
+            <label for="newsletter-email" class="visually-hidden"
+              >Din e-mail</label
+            >
+            <input
+              id="newsletter-email"
+              type="email"
+              placeholder="enter your email address"
+              required
+            />
+            <button type="submit">Tilmeld dig nyhedsbrev</button>
+          </form>
+        </section>
+      </div>
+    </footer>
   </body>
 </html>

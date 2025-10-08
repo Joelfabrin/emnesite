@@ -16,10 +16,8 @@
     transparent calc(var(--stripe-size) / 2),
     transparent var(--stripe-size)
   );
-  display: flex;
   align-items: center;
   justify-content: center;
-  padding: 2rem;
 }
 
 .forsidebaggrund {

@@ -1,3 +1,10 @@
+/*************** Reset *********************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/********* HEADER - MENU  *********/
 header {
   top: 0;
   display: flex;
@@ -9,13 +16,15 @@ header {
   background-color: #f8f9ed;
 }
 
-.logo img {
-  height: 150px;
-  width: auto;
-  display: block;
-  margin: 6px auto 0;
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 50px;
+  font-family: Bungee Shade, sans-serif;
+  color: #bc3039;
+  text-decoration: none;
+  gap: 50px;
 }
-
 nav {
   display: flex;
   align-items: center;
@@ -45,8 +54,9 @@ nav {
   text-transform: uppercase;
   letter-spacing: 1px;
   font-weight: 600;
-  font-size: 25px;
+  font-size: 40px;
   color: #bc3039;
+  font-family: kirang haerang, sans-serif;
   text-decoration: none;
   transition: color 0.25s;
   text-align: center;
@@ -56,17 +66,12 @@ nav {
   color: #7c9dd2;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 990px) {
   header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 18px;
     padding: 36px 16px 28px;
-  }
-
-  .logo img {
-    height: 120px;
   }
 
   nav {
@@ -94,7 +99,7 @@ nav {
     font-weight: 700px;
     text-align: center;
     color: #bc3039;
-    font-size: clamp(10px, 6vw, 18px);
+    font-size: 28px;
     padding: 4px 0;
   }
 }
@@ -109,7 +114,8 @@ nav {
   color: #bc3039;
 }
 .intro h2 {
-  font-size: clamp(28px, 4vw, 44px);
+  font-size: 55px;
+  font-family: kirang haerang, serif;
   letter-spacing: 2px;
   margin-bottom: 18px;
 }
@@ -117,14 +123,29 @@ nav {
   max-width: 720px;
   margin: 0 auto 14px;
   line-height: 1.8;
-  font-size: clamp(15px, 1.6vw, 18px);
+  font-size: 30px;
+  font-family: instrument serif;
   background: rgba(255, 255, 255, 0.6); /* let hvidt slør over kop-baggrunden */
   padding: 10px 14px;
   border-radius: 10px;
 }
 
 .kyskaffe {
-  size: 10px;
+  display: grid;
+  place-items: center;
+  margin: 24px 0;
+}
+
+.kyskaffe img {
+  width: 180px;
+  height: auto;
+  max-width: 90vw;
+}
+
+@media (max-width: 640px) {
+  .kyskaffe img {
+    width: 150px;
+  }
 }
 
 /*************** INTRO SLUT *********************/
@@ -134,7 +155,7 @@ nav {
 /* === Footer === */
 .site-footer {
   background: #f8f9ed;
-  padding: 36px 0 46px;
+  padding: 36px 80px 46px;
 }
 
 .footer-inner {
@@ -147,14 +168,16 @@ nav {
 .footer-col h3 {
   color: #bc3039; /* rød headline */
   text-transform: uppercase;
-  letter-spacing: 1.2px;
-  font-size: 20px;
+  text-align: center;
+  font-family: kirang haerang, sans-serif;
+  font-size: 25px;
   margin: 4px 0 14px;
 }
 
 .footer-col h4 {
   color: #7c9dd2;
   text-transform: uppercase;
+  text-align: center;
   font-size: 18px;
   margin: 40px 0px 7px;
 }
@@ -164,6 +187,7 @@ nav {
 .footer-col a {
   color: #333;
   font-size: 15px;
+  text-align: center;
   line-height: 1.7;
   text-decoration: none;
 }
