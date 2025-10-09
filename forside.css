@@ -19,12 +19,15 @@ header {
 .logo {
   display: flex;
   align-items: center;
-  font-size: 50px;
+  font-size: 35px;
   font-family: Bungee Shade, sans-serif;
+  letter-spacing: 15px;
   color: #bc3039;
   text-decoration: none;
   gap: 50px;
+  margin-bottom: 35px;
 }
+
 nav {
   display: flex;
   align-items: center;
@@ -64,6 +67,7 @@ nav {
 
 .menu a:hover {
   color: #7c9dd2;
+  transform: translateY(-3px);
 }
 
 @media (max-width: 990px) {
@@ -137,9 +141,8 @@ nav {
 }
 
 .kyskaffe img {
-  width: 180px;
+  width: 120px;
   height: auto;
-  max-width: 90vw;
 }
 
 @media (max-width: 640px) {

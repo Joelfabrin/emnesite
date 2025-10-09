@@ -1,8 +1,6 @@
 /*************** Reset *********************/
 * {
-  /* margin: 0; */
   padding: 0;
-  box-sizing: border-box;
 }
 
 /********* HEADER - MENU  *********/
@@ -14,6 +12,9 @@ body {
 }
 
 .site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   position: relative;
   top: 0;
   z-index: 100;
@@ -22,14 +23,14 @@ body {
 }
 
 .site-header_inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 16px 40px;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   gap: 48px;
   box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 0px;
 }
 
 .site-nav {
@@ -52,7 +53,7 @@ header {
 .logo {
   display: flex;
   align-items: center;
-  font-size: 40px;
+  font-size: 20px;
   font-family: Bungee Shade, sans-serif;
   color: #bc3039;
   text-decoration: none;
@@ -65,7 +66,7 @@ header {
 }
 
 .blaavinglas img {
-  height: 120px;
+  height: 100px;
   width: auto;
   display: block;
 }
@@ -79,7 +80,7 @@ nav {
 nav a {
   font-family: kirang haerang, serif;
   color: #bc3039;
-  font-size: 42px;
+  font-size: 25px;
   letter-spacing: 0.5px;
   text-transform: uppercase;
   text-decoration: none;
@@ -108,11 +109,11 @@ nav a:hover {
     font-size: 30px;
   }
   .logo {
-    font-size: 38px;
+    font-size: 20px;
   }
 
   .blaavinglas img {
-    height: 80px;
+    height: 70px;
     width: auto;
   }
 }
@@ -134,7 +135,7 @@ nav a:hover {
     font-size: 24px;
   }
   .logo {
-    font-size: 25px;
+    font-size: 20px;
   }
   .blaavinglas img {
     height: 60px;
@@ -164,15 +165,20 @@ nav a:hover {
   box-shadow: 0px 2px 0px rgba(0, 0, 0, 0, 0.05);
   padding: 18px 22px;
   margin: 0 auto 28px;
-  max-width: 450px;
+  width: 650px;
+  height: auto;
   line-height: 1.6;
   color: #333;
   font-family: instrument serif;
   text-align: center;
 }
+p {
+  color: black;
+  font-size: 25px;
+}
 
 .ob-card p + p {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 .ob-links {
@@ -186,10 +192,9 @@ nav a:hover {
   display: inline-block;
   padding: 0px 16px;
   text-decoration: none;
-  font-weight: 800;
   font-size: 30px;
   font-family: kirang haerang, serif;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.9px;
   color: #bc3039;
   background: transparent;
   transition: transform 120ms ease, background 120ms ease, color 120ms ease;
@@ -200,7 +205,152 @@ nav a:hover {
   transform: translateY(-2px);
 }
 /******* MAIN SEKTION SLUT *******/
+/******* AKTIVITER ********/
 
+.titel-aktiviteter {
+  font-family: kirang haerang, serif;
+  font-size: 50px;
+  color: #bc3039;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-top: 500px;
+}
+
+.aktivitet1 {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.aktivitet1 img {
+  width: 900px;
+  height: auto;
+  margin: 50px 0px 00px;
+}
+
+.top-knap1 {
+  display: flex;
+  position: absolute;
+  top: 188%;
+  right: 20%;
+  color: #bc3039;
+  font-family: Bungee Shade, sans-serif;
+  font-size: 20px;
+  text-decoration: none; /* fjerner understregning */
+  padding: 20px 20px; /* lidt luft omkring teksten */
+}
+.top-knap1:hover {
+  color: #7c9dd2;
+  transform: translateY(-2px);
+}
+/******* AKTIVITER SLUT ********/
+
+/******* RESTAURANTER ********/
+
+.titel-restauranter {
+  font-family: kirang haerang, serif;
+  font-size: 50px;
+  color: #bc3039;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-top: 500px;
+}
+
+.restauranter1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.restauranter1 img {
+  width: 900px;
+  height: auto;
+  margin: 50px 0px 200px;
+}
+.top-knap2 {
+  display: flex;
+  position: absolute;
+  top: 300%;
+  right: 20%;
+  color: #bc3039;
+  font-family: Bungee Shade, sans-serif;
+  font-size: 20px;
+  text-decoration: none; /* fjerner understregning */
+  padding: 20px 20px; /* lidt luft omkring teksten */
+}
+.top-knap2:hover {
+  color: #7c9dd2;
+  transform: translateY(-2px);
+}
+
+.restauranter2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.restauranter2 img {
+  width: 900px;
+  height: auto;
+  margin: 50px 0px 300px;
+}
+.top-knap3 {
+  display: flex;
+  position: absolute;
+  top: 373%;
+  right: 20%;
+  color: #bc3039;
+  font-family: Bungee Shade, sans-serif;
+  font-size: 20px;
+  text-decoration: none; /* fjerner understregning */
+  padding: 20px 20px; /* lidt luft omkring teksten */
+}
+.top-knap3:hover {
+  color: #7c9dd2;
+  transform: translateY(-2px);
+}
+/******* RESTAURANTER SLUT ********/
+
+/******* VINBAR ********/
+.titel-vinbar {
+  font-family: kirang haerang, serif;
+  font-size: 50px;
+  color: #bc3039;
+  text-align: center;
+  letter-spacing: 1px;
+  margin-top: 500px;
+}
+
+.vinbar1 {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.vinbar1 img {
+  width: 900px;
+  height: auto;
+  margin: 50px 0px 300px;
+}
+
+.top-knap4 {
+  display: flex;
+  position: absolute;
+  top: 430%;
+  right: 20%;
+  color: #bc3039;
+  font-family: Bungee Shade, sans-serif;
+  font-size: 20px;
+  text-decoration: none; /* fjerner understregning */
+  padding: 20px 20px; /* lidt luft omkring teksten */
+}
+.top-knap4:hover {
+  color: #7c9dd2;
+  transform: translateY(-2px);
+}
+/******* VINBAR SLUT ********/
 /*************** FOOTER *********************/
 
 /* === Footer === */
