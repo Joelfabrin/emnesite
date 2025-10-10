@@ -232,9 +232,9 @@ p {
 
 .top-knap1 {
   display: flex;
-  position: absolute;
-  top: 185%;
-  right: 20%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 300px;
   color: #bc3039;
   font-family: Bungee Shade, sans-serif;
   font-size: 20px;
@@ -267,13 +267,13 @@ p {
 .restauranter1 img {
   width: 900px;
   height: auto;
-  margin: 50px 0px 200px;
+  margin: 50px 0px 00px;
 }
 .top-knap2 {
   display: flex;
-  position: absolute;
-  top: 298%;
-  right: 20%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 150px;
   color: #bc3039;
   font-family: Bungee Shade, sans-serif;
   font-size: 20px;
@@ -294,13 +294,13 @@ p {
 .restauranter2 img {
   width: 900px;
   height: auto;
-  margin: 50px 0px 300px;
+  margin: 50px 0px 000px;
 }
 .top-knap3 {
   display: flex;
-  position: absolute;
-  top: 377%;
-  right: 20%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 300px;
   color: #bc3039;
   font-family: Bungee Shade, sans-serif;
   font-size: 20px;
@@ -333,14 +333,14 @@ p {
 .vinbar1 img {
   width: 900px;
   height: auto;
-  margin: 50px 0px 300px;
+  margin: 50px 0px 00px;
 }
 
 .top-knap4 {
   display: flex;
-  position: absolute;
-  top: 515%;
-  right: 20%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 300px;
   color: #bc3039;
   font-family: Bungee Shade, sans-serif;
   font-size: 20px;

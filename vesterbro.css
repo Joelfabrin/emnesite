@@ -109,7 +109,7 @@ nav a:hover {
     font-size: 30px;
   }
   .logo {
-    font-size: 38px;
+    font-size: 20px;
   }
 
   .blaabakke img {
@@ -135,10 +135,10 @@ nav a:hover {
     font-size: 24px;
   }
   .logo {
-    font-size: 25px;
+    font-size: 20px;
   }
   .blaabakke img {
-    height: 80px;
+    height: 60px;
     width: auto;
   }
 }
