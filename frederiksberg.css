@@ -59,7 +59,6 @@ header {
   text-decoration: none;
   gap: 50px;
 }
-
 .logo:hover {
   color: #7c9dd2;
   transform: translateY(-2px);
@@ -231,9 +230,9 @@ p {
 
 .top-knap1 {
   display: flex;
-  position: absolute;
-  top: 189%;
-  right: 20%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 300px;
   color: #bc3039;
   font-family: Bungee Shade, sans-serif;
   font-size: 20px;
@@ -266,13 +265,13 @@ p {
 .restauranter1 img {
   width: 900px;
   height: auto;
-  margin: 50px 0px 200px;
+  margin: 50px 0px 00px;
 }
 .top-knap2 {
   display: flex;
-  position: absolute;
-  top: 302%;
-  right: 20%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 300px;
   color: #bc3039;
   font-family: Bungee Shade, sans-serif;
   font-size: 20px;
@@ -297,9 +296,9 @@ p {
 }
 .top-knap3 {
   display: flex;
-  position: absolute;
-  top: 373%;
-  right: 20%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 300px;
   color: #bc3039;
   font-family: Bungee Shade, sans-serif;
   font-size: 20px;
@@ -332,14 +331,14 @@ p {
 .vinbar1 img {
   width: 900px;
   height: auto;
-  margin: 50px 0px 300px;
+  margin: 50px 0px 00px;
 }
 
 .top-knap4 {
   display: flex;
-  position: absolute;
-  top: 432%;
-  right: 20%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 300px;
   color: #bc3039;
   font-family: Bungee Shade, sans-serif;
   font-size: 20px;
