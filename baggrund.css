@@ -21,7 +21,7 @@
 }
 
 .forsidebaggrund {
-  background-image: url(/icons/kopper.png);
+  background-image: url(icons/kopper.png);
   background-size: 950px; /* make it fill the screen */
   background-repeat: repeat; /* don’t tile the image */
   background-position: center; /* center the image */
@@ -29,7 +29,7 @@
 
 @media (max-width: 800px) {
   .forsidebaggrund {
-    background-image: url(/icons/kopper.png);
+    background-image: url(icons/kopper.png);
     background-size: 850px; /* make it fill the screen */
     background-repeat: repeat; /* don’t tile the image */
     background-position: center;
