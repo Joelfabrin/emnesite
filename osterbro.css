@@ -361,7 +361,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 150px;
+  margin-bottom: 500px;
   color: #bc3039;
   font-family: Bungee Shade, sans-serif;
   font-size: 20px;
@@ -592,17 +592,17 @@ img {
   header {
     top: 0;
     z-index: 100;
-    padding: 14px 16px; /* lidt mindre padding */
+    padding: 14px 16px;
     background-color: #f8f9ed;
     border-bottom: 1px solid #e8ead8;
   }
 
   /* Indre header-layout: fjern absolute centrerings-hack */
   .site-header_inner {
-    position: static !important;
+    position: static;
     left: auto;
     transform: none;
-    display: flex;
+    display: grid;
     flex-direction: column;
     align-items: center;
     gap: 12px;
@@ -613,7 +613,7 @@ img {
 
   .logo {
     gap: 12px;
-    font-size: 18px; /* mindre logo-tekst */
+    font-size: 20px; /* mindre logo-tekst */
   }
 
   .blaakaffe img {
@@ -654,10 +654,11 @@ img {
     margin: 16px auto 40px;
     padding: 0 16px;
     text-align: center;
+    justify-content: center;
   }
 
   .ob-title {
-    font-size: clamp(28px, 6vw, 40px);
+    font-size: 40px;
     margin-bottom: 8px;
   }
 
@@ -706,21 +707,25 @@ img {
 
   /* Alle billedblokke skalerer pænt i bredden */
   .aktivitet1 img,
+  .aktivitet2 img,
+  .aktivitet3 img,
   .restauranter1 img,
   .restauranter2 img,
-  .vinbar1 img {
+  .restauranter3 img,
+  .vinbar1 img,
+  .vinbar2 img,
+  .vinbar3 img {
     width: 100%;
     max-width: 900px; /* bevarer din maks-størrelse */
     height: auto;
-    margin: 16px 0 0; /* reducerer 50px topmargin */
+    margin: 16px 0 0px; /* reducerer 50px topmargin */
   }
 
   /* “Til toppen”-knapper – genbrug look, mindre spacing */
   .top-knap1,
   .top-knap2,
-  .top-knap3,
-  .top-knap4 {
-    margin: 16px 0 24px;
+  .top-knap3 {
+    margin: 16px 0 300px;
     font-size: 16px;
     padding: 12px 16px;
   }
