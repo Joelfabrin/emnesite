@@ -53,11 +53,20 @@
     <span id="top"></span>
 
     <header class="site-header">
-      <a class="logo" href="index.html">
-        <h1>AMORA</h1>
-      </a>
+      <a class="logo" href="index.html"><h1>AMORA</h1></a>
       <div class="site-header_inner">
-        <nav>
+        <input
+          type="checkbox"
+          id="menu-toggle"
+          class="menu-toggle-checkbox"
+          aria-hidden="true"
+        />
+        <label class="menu-toggle" for="menu-toggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <nav class="site-nav">
           <span class="blaakaffe">
             <img src="icons/blaakaffe.png" alt="" />
           </span>

@@ -11,21 +11,22 @@ header {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  padding: 24px 16px 14px;
+  gap: clamp(8px, 2vw, 12px);
+  padding: clamp(20px, 6vw, 30px) clamp(12px, 5vw, 24px)
+    clamp(14px, 5vw, 24px);
   background-color: #f8f9ed;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  font-size: 35px;
+  font-size: clamp(26px, 6vw, 35px);
   font-family: Bungee Shade, sans-serif;
-  letter-spacing: 15px;
+  letter-spacing: clamp(6px, 2vw, 15px);
   color: #bc3039;
   text-decoration: none;
-  gap: 50px;
-  margin-bottom: 35px;
+  gap: clamp(12px, 6vw, 50px);
+  margin-bottom: clamp(18px, 7vw, 35px);
 }
 
 nav {
@@ -52,12 +53,12 @@ nav {
 
 .menu a {
   display: block;
-  padding: 6px 0;
+  padding: clamp(4px, 1.4vw, 6px) 0;
   text-decoration: none;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: clamp(0.5px, 0.8vw, 1px);
   font-weight: 600;
-  font-size: 30px;
+  font-size: clamp(20px, 4.8vw, 30px);
   color: #bc3039;
   font-family: kirang haerang, sans-serif;
   text-decoration: none;
@@ -75,7 +76,8 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 36px 16px 28px;
+    padding: clamp(24px, 8vw, 36px) clamp(12px, 6vw, 20px)
+      clamp(16px, 6vw, 28px);
   }
 
   nav {
@@ -87,11 +89,12 @@ nav {
     display: flex;
     flex-direction: column;
     align-self: center;
-    gap: 8px;
+    gap: clamp(6px, 3vw, 12px);
     list-style: none;
     margin: 0;
     padding: 0;
     background-color: transparent;
+    width: min(100%, 360px);
   }
   .menu li {
     margin: 0;
@@ -99,12 +102,12 @@ nav {
   .menu a {
     text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: 2px;
+    letter-spacing: clamp(0.5px, 1.2vw, 2px);
     font-weight: 700;
     text-align: center;
     color: #bc3039;
-    font-size: 28px;
-    padding: 4px 0;
+    font-size: clamp(18px, 5.5vw, 26px);
+    padding: clamp(6px, 2vw, 10px) 0;
   }
 }
 
@@ -114,23 +117,23 @@ nav {
 /* Introsektion */
 .intro {
   text-align: center;
-  padding: min(9vh, 96px) 0;
+  padding: clamp(48px, 10vh, 96px) clamp(16px, 6vw, 32px);
   color: #bc3039;
 }
 .intro h2 {
-  font-size: 55px;
+  font-size: clamp(32px, 6vw, 55px);
   font-family: kirang haerang, serif;
-  letter-spacing: 2px;
-  margin-bottom: 18px;
+  letter-spacing: clamp(1px, 0.6vw, 2px);
+  margin-bottom: clamp(12px, 3vw, 18px);
 }
 .intro p {
-  max-width: 720px;
-  margin: 0 auto 14px;
-  line-height: 1.8;
-  font-size: 30px;
+  max-width: min(720px, 100%);
+  margin: 0 auto clamp(10px, 3vw, 18px);
+  line-height: 1.7;
+  font-size: clamp(18px, 4.8vw, 28px);
   font-family: instrument serif;
   background: rgba(255, 255, 255, 0.6); /* let hvidt slør over kop-baggrunden */
-  padding: 10px 14px;
+  padding: clamp(12px, 4vw, 18px);
   border-radius: 10px;
 }
 
@@ -141,13 +144,13 @@ nav {
 }
 
 .kyskaffe img {
-  width: 120px;
+  width: clamp(110px, 32vw, 160px);
   height: auto;
 }
 
 @media (max-width: 640px) {
   .kyskaffe img {
-    width: 150px;
+    width: clamp(100px, 38vw, 140px);
   }
 }
 
@@ -158,13 +161,14 @@ nav {
 /* === Footer === */
 .site-footer {
   background: #f8f9ed;
-  padding: 36px 80px 46px;
+  padding: clamp(28px, 7vw, 36px) clamp(20px, 7vw, 80px)
+    clamp(32px, 8vw, 46px);
 }
 
 .footer-inner {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr 1.4fr; /* 4 kolonner */
-  gap: 32px;
+  gap: clamp(20px, 6vw, 32px);
   align-items: start;
 }
 
@@ -173,23 +177,23 @@ nav {
   text-transform: uppercase;
   text-align: center;
   font-family: kirang haerang, sans-serif;
-  font-size: 25px;
-  margin: 4px 0 14px;
+  font-size: clamp(20px, 4.4vw, 25px);
+  margin: 4px 0 clamp(12px, 3.5vw, 18px);
 }
 
 .footer-col h4 {
   color: #7c9dd2;
   text-transform: uppercase;
   text-align: center;
-  font-size: 18px;
-  margin: 40px 0px 7px;
+  font-size: clamp(16px, 3.6vw, 18px);
+  margin: clamp(24px, 7vw, 40px) 0 clamp(6px, 2vw, 10px);
 }
 
 .footer-col p,
 .footer-col li,
 .footer-col a {
   color: #333;
-  font-size: 15px;
+  font-size: clamp(14px, 3.4vw, 15px);
   text-align: center;
   line-height: 1.7;
   text-decoration: none;
@@ -210,23 +214,26 @@ nav {
   grid-template-columns: 1fr;
   gap: 12px;
   max-width: 320px;
-  margin-left: auto;
+  width: 100%;
+  margin-inline: auto;
 }
 .newsletter input {
   border: 1px solid #e0d6c5;
   background: #fff;
-  padding: 12px 14px;
+  padding: clamp(10px, 3.4vw, 12px) clamp(12px, 4vw, 16px);
   border-radius: 8px;
   outline: none;
+  font-size: clamp(14px, 3.6vw, 16px);
 }
 .newsletter button {
   border: 0;
-  padding: 12px 18px;
+  padding: clamp(10px, 3.6vw, 12px) clamp(16px, 5vw, 18px);
   border-radius: 999px;
   background: #bc3039; /* rød knap som i mockup */
   color: #fff;
   font-weight: 800;
   letter-spacing: 0.4px;
+  font-size: clamp(14px, 3.6vw, 16px);
   text-transform: uppercase;
   cursor: pointer;
 }
@@ -253,7 +260,7 @@ nav {
     grid-column: 1 / -1;
   }
   .footer-news .newsletter {
-    margin-left: 0;
+    margin-inline: 0;
   }
 }
 @media (max-width: 640px) {

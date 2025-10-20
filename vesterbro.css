@@ -42,6 +42,49 @@ body {
   gap: 32px;
 }
 
+.menu-toggle-checkbox {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.menu-toggle {
+  display: none;
+  width: 44px;
+  height: 40px;
+  flex-direction: column;
+  justify-content: center;
+  gap: 7px;
+  align-items: center;
+  padding: 10px;
+  border-radius: 14px;
+  border: none;
+  background: linear-gradient(135deg, #bc3039, #d55961);
+  box-shadow: 0 6px 18px rgba(188, 48, 57, 0.28);
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  border-radius: 999px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.menu-toggle:hover {
+  transform: translateY(-1px);
+  background: linear-gradient(135deg, #c8454e, #df6b74);
+  box-shadow: 0 8px 22px rgba(188, 48, 57, 0.34);
+}
+
+.menu-toggle-checkbox:checked + .menu-toggle {
+  background: linear-gradient(135deg, #6e8fc1, #8ea8d4);
+  box-shadow: 0 8px 22px rgba(110, 143, 193, 0.35);
+}
+
 header {
   position: fixed;
   top: 0;
@@ -121,6 +164,213 @@ nav a:hover {
   }
 }
 
+@media (max-width: 430px) {
+  header {
+    padding: 12px 16px;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .site-header_inner {
+    position: static;
+    transform: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .menu-toggle {
+    display: flex;
+    margin: 0 auto;
+  }
+
+  .menu-toggle-checkbox:checked + .menu-toggle span:nth-child(1) {
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .menu-toggle-checkbox:checked + .menu-toggle span:nth-child(2) {
+    opacity: 0;
+  }
+
+  .menu-toggle-checkbox:checked + .menu-toggle span:nth-child(3) {
+    transform: translateY(-9px) rotate(-45deg);
+  }
+  .site-nav {
+    display: none;
+    width: min(100%, 280px);
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+    margin: 4px auto 0;
+    border: 1px solid rgba(124, 157, 210, 0.35);
+    border-radius: 16px;
+    overflow: hidden;
+    background: #f8f9ed;
+    box-shadow: 0 14px 28px rgba(16, 35, 66, 0.12);
+    backdrop-filter: blur(4px);
+    will-change: transform, opacity;
+  }
+
+
+  .site-nav span {
+    display: flex;
+    justify-content: center;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(124, 157, 210, 0.25);
+    background: transparent;
+  }
+
+  .menu-toggle-checkbox:checked ~ .site-nav {
+    display: flex;
+    animation: menuFade 0.24s ease forwards;
+  }
+
+  .site-nav a {
+    width: 100%;
+    font-size: 18px;
+    letter-spacing: 0.8px;
+    padding: 12px 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(124, 157, 210, 0.25);
+    background: rgba(255, 255, 255, 0.65);
+    transition: background 0.18s ease, color 0.18s ease;
+  }
+
+  .site-nav a:last-of-type {
+    border-bottom: 0;
+  }
+
+  .site-nav a:hover {
+    background: rgba(124, 157, 210, 0.15);
+    color: #7c9dd2;
+  }
+
+  .blaabakke img {
+    height: 48px;
+    margin: 12px 0;
+  }
+
+  .ob-container {
+    margin: 120px auto 48px;
+    padding: 0 16px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ob-title {
+    font-size: clamp(28px, 8vw, 36px);
+  }
+
+  .ob-card {
+    width: min(100%, 360px);
+    padding: 18px 16px;
+    margin: 0 auto 24px;
+  }
+
+  .ob-card p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .ob-links {
+    width: 100%;
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .ob-links a {
+    width: 100%;
+    font-size: 20px;
+    padding: 10px 0;
+  }
+
+  .titel-aktiviteter,
+  .titel-restauranter,
+  .titel-vinbar {
+    margin-top: 48px;
+    margin-bottom: 16px;
+    font-size: clamp(26px, 7vw, 32px);
+  }
+
+  .aktivitet1,
+  .aktivitet2,
+  .aktivitet3,
+  .restauranter1,
+  .restauranter2,
+  .restauranter3,
+  .vinbar1,
+  .vinbar2,
+  .vinbar3 {
+    padding: 0 16px;
+  }
+
+  .aktivitet1 img,
+  .aktivitet2 img,
+  .aktivitet3 img,
+  .restauranter1 img,
+  .restauranter2 img,
+  .restauranter3 img,
+  .vinbar1 img,
+  .vinbar2 img,
+  .vinbar3 img {
+    width: 100%;
+    max-width: 360px;
+    margin: 24px 0 72px;
+  }
+
+  .top-knap1,
+  .top-knap2,
+  .top-knap3 {
+    margin: 24px 0 96px;
+    font-size: 16px;
+    padding: 12px 18px;
+  }
+
+  .site-footer {
+    padding: 28px 16px 40px;
+  }
+
+  .footer-inner {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .footer-col h3 {
+    font-size: 22px;
+  }
+
+  .footer-col h4 {
+    font-size: 18px;
+  }
+
+  .footer-col p,
+  .footer-col li,
+  .footer-col a {
+    font-size: 16px;
+  }
+
+  .newsletter input,
+  .newsletter button {
+    width: 100%;
+  }
+}
+
+@keyframes menuFade {
+  0% {
+    opacity: 0;
+    transform: translateY(-8px) scaleY(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scaleY(1);
+  }
+}
+
 @media (max-width: 995px) {
   header {
     flex-direction: column;
@@ -165,7 +415,7 @@ nav a:hover {
 .ob-card {
   background: #ffffff;
   border: 2px solid #7c9dd2;
-  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0, 0.05);
+  box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.05);
   padding: 18px 22px;
   margin: 0 auto 28px;
   width: 650px;
@@ -217,7 +467,7 @@ p {
   color: #bc3039;
   text-align: center;
   letter-spacing: 1px;
-  margin-top: 500px;
+  margin-top: 1000px;
 }
 
 .aktivitet1 {
@@ -230,6 +480,32 @@ p {
 .aktivitet1 img {
   width: 900px;
   height: auto;
+  margin: 50px 0px 200px;
+}
+
+.aktivitet2 {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.aktivitet2 img {
+  width: 900px;
+  height: auto;
+  margin: 50px 0px 200px;
+}
+
+.aktivitet3 {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.aktivitet3 img {
+  width: 900px;
+  height: auto;
   margin: 50px 0px 00px;
 }
 
@@ -237,7 +513,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 300px;
+  margin-bottom: 500px;
   color: #bc3039;
   font-family: Bungee Shade, sans-serif;
   font-size: 20px;
@@ -270,22 +546,7 @@ p {
 .restauranter1 img {
   width: 900px;
   height: auto;
-  margin: 50px 0px 00px;
-}
-.top-knap2 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 300px;
-  color: #bc3039;
-  font-family: Bungee Shade, sans-serif;
-  font-size: 20px;
-  text-decoration: none; /* fjerner understregning */
-  padding: 20px 20px; /* lidt luft omkring teksten */
-}
-.top-knap2:hover {
-  color: #7c9dd2;
-  transform: translateY(-2px);
+  margin: 50px 0px 200px;
 }
 
 .restauranter2 {
@@ -297,20 +558,32 @@ p {
 .restauranter2 img {
   width: 900px;
   height: auto;
-  margin: 50px 0px 00px;
+  margin: 50px 0px 200px;
 }
-.top-knap3 {
+.restauranter3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.restauranter3 img {
+  width: 900px;
+  height: auto;
+  margin: 50px 0px 000px;
+}
+
+.top-knap2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 300px;
+  margin-bottom: 500px;
   color: #bc3039;
   font-family: Bungee Shade, sans-serif;
   font-size: 20px;
   text-decoration: none; /* fjerner understregning */
   padding: 20px 20px; /* lidt luft omkring teksten */
 }
-.top-knap3:hover {
+.top-knap2:hover {
   color: #7c9dd2;
   transform: translateY(-2px);
 }
@@ -336,21 +609,45 @@ p {
 .vinbar1 img {
   width: 900px;
   height: auto;
+  margin: 50px 0px 200px;
+}
+.vinbar2 {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.vinbar2 img {
+  width: 900px;
+  height: auto;
+  margin: 50px 0px 200px;
+}
+.vinbar3 {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+
+.vinbar3 img {
+  width: 900px;
+  height: auto;
   margin: 50px 0px 00px;
 }
 
-.top-knap4 {
+.top-knap3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 300px;
+  margin-bottom: 500px;
   color: #bc3039;
   font-family: Bungee Shade, sans-serif;
   font-size: 20px;
   text-decoration: none; /* fjerner understregning */
   padding: 20px 20px; /* lidt luft omkring teksten */
 }
-.top-knap4:hover {
+.top-knap3:hover {
   color: #7c9dd2;
   transform: translateY(-2px);
 }
@@ -475,210 +772,3 @@ p {
 }
 
 /*************** FOOTER SLUT *********************/
-/* =========================================
-   AMORA – Mobile overrides (drop-in)
-   Læg nederst i CSS'en
-   ========================================= */
-
-/* Basalt: billeder skalerer altid korrekt */
-img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Pænere default tekststørrelser på små skærme */
-@media (max-width: 1230px) {
-  html {
-    font-size: 16px;
-  }
-  body {
-    line-height: 1.6;
-  }
-}
-
-/* ===========================
-   HEADER: fix overlap & layout
-   =========================== */
-@media (max-width: 1230px) {
-  header {
-    top: 0;
-    z-index: 100;
-    padding: 14px 16px;
-    background-color: #f8f9ed;
-    border-bottom: 1px solid #e8ead8;
-  }
-
-  /* Indre header-layout: fjern absolute centrerings-hack */
-  .site-header_inner {
-    position: static;
-    left: auto;
-    transform: none;
-    display: grid;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    padding: 0;
-    margin: 0;
-    max-width: none;
-  }
-
-  .logo {
-    gap: 12px;
-    font-size: 20px; /* mindre logo-tekst */
-  }
-
-  .blaavinglas img {
-    height: 48px; /* mindre logo-billede */
-    width: auto;
-  }
-
-  nav {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 12px; /* tættere afstand på mobil */
-  }
-
-  nav a {
-    font-size: 20px; /* bedre læsbarhed/tap target */
-    padding: 6px 8px; /* øger hit-area en smule */
-  }
-
-  /* ===========================
-   HERO / ØSTERBRO-kort
-   =========================== */
-  @media (max-width: 1230px) {
-    .ob-container {
-      max-width: 640px;
-      margin: 16px auto 40px;
-      padding: 0 16px;
-      text-align: center;
-      justify-content: center;
-    }
-
-    .ob-title {
-      font-size: 40px;
-      margin-bottom: 8px;
-    }
-
-    .ob-card {
-      padding: 16px 16px;
-      margin-bottom: 16px;
-      border-width: 2px;
-      width: 500px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05); /* retter din rgba-typo */
-    }
-
-    .ob-card p {
-      font-size: 18px;
-    }
-
-    .ob-links {
-      gap: 6px;
-      margin-top: 8px;
-      margin-bottom: 300px;
-    }
-    .ob-links a {
-      font-size: 20px;
-      padding: 2px 10px;
-    }
-  }
-
-  /* ===========================
-   SEKTIONER & BILLEDER
-   =========================== */
-
-  /* Fjern gigantiske margins og brug ensartet padding i sektioner */
-  @media (max-width: 1230px) {
-    .titel-aktiviteter,
-    .titel-restauranter,
-    .titel-vinbar {
-      margin-top: 0 !important; /* fjerner 500px huller */
-      margin-bottom: 16px;
-      font-size: clamp(26px, 5.8vw, 36px);
-      text-align: center;
-    }
-
-    /* En fælles sektion-padding via forældre-sektioner */
-    #aktiviteter,
-    #restauranter,
-    #vinbar {
-      padding: 40px 0 16px;
-    }
-
-    /* Alle billedblokke skalerer pænt i bredden */
-    .aktivitet1 img,
-    .aktivitet2 img,
-    .restauranter1 img,
-    .restauranter2 img,
-    .vinbar1 img,
-    .vinbar2 img {
-      width: 100%;
-      max-width: 900px; /* bevarer din maks-størrelse */
-      height: auto;
-      margin: 16px 0 150px; /* reducerer 50px topmargin */
-    }
-
-    /* “Til toppen”-knapper – genbrug look, mindre spacing */
-    .top-knap1,
-    .top-knap2,
-    .top-knap3 {
-      margin: 16px 0 400px;
-      font-size: 16px;
-      padding: 12px 16px;
-    }
-  }
-
-  /* Ekstra lille skærm finpudsning (<= 480px) */
-  @media (max-width: 480px) {
-    nav a {
-      font-size: 18px;
-    }
-    .ob-card p {
-      font-size: 17px;
-    }
-    .ob-links a {
-      font-size: 18px;
-    }
-    .top-knap1,
-    .top-knap2,
-    .top-knap3,
-    .top-knap4 {
-      font-size: 15px;
-      padding: 10px 14px;
-    }
-  }
-
-  /* ===========================
-   FOOTER
-   =========================== */
-  @media (max-width: 1230px) {
-    .site-footer {
-      padding: 24px 16px 32px;
-    }
-    .footer-inner {
-      max-width: 640px;
-      margin: 0 auto;
-    }
-    .footer-col h3 {
-      font-size: 22px;
-    }
-    .footer-col h4 {
-      font-size: 18px;
-      margin: 20px 0 8px;
-    }
-    .footer-col p,
-    .footer-col li,
-    .footer-col a {
-      font-size: 15px;
-    }
-    .newsletter input {
-      padding: 12px;
-    }
-    .newsletter button {
-      padding: 12px 16px;
-    }
-  }
-}

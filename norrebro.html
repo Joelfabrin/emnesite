@@ -46,15 +46,24 @@
       href="https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap"
       rel="stylesheet"
     />
-    <title>AMORA - NØRREBRO</title>
+    <title>NØRREBRO - AMORA</title>
   </head>
   <body class="striped-bg">
     <header class="site-header">
-      <a class="logo" href="index.html">
-        <h1>AMORA</h1>
-      </a>
+      <a class="logo" href="index.html"><h1>AMORA</h1></a>
       <div class="site-header_inner">
-        <nav>
+        <input
+          type="checkbox"
+          id="menu-toggle"
+          class="menu-toggle-checkbox"
+          aria-hidden="true"
+        />
+        <label class="menu-toggle" for="menu-toggle" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </label>
+        <nav class="site-nav">
           <a href="osterbro.html">ØSTERBRO</a>
           <a href="vesterbro.html">VESTERBRO</a>
           <span class="blaavinglas">
