@@ -93,14 +93,14 @@ nav {
     padding: 0;
     background-color: transparent;
   }
-  menu li {
+  .menu li {
     margin: 0;
   }
   .menu a {
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-weight: 700px;
+    font-weight: 700;
     text-align: center;
     color: #bc3039;
     font-size: 28px;
