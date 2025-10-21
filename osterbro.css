@@ -285,6 +285,26 @@ p {
     font-size: 20px;
     padding: 2px 10px;
   }
+
+  .media-slider {
+    width: 100%;
+    gap: 24px;
+    padding: 0 16px;
+    margin: 32px auto 48px;
+  }
+
+  .media-slide {
+    flex: 0 0 calc(100% - 32px);
+  }
+
+  .media-slide img {
+    box-shadow: 0 16px 32px rgba(16, 35, 66, 0.14);
+  }
+
+  .slider-hint {
+    font-size: 16px;
+    margin: 0 0 52px;
+  }
 }
 
 /******* MAIN SEKTION SLUT *******/
@@ -300,43 +320,143 @@ p {
   margin-top: 1000px;
 }
 
-.aktivitet1 {
+.media-slider {
   display: flex;
+  align-items: center;
+  gap: 32px;
+  padding: 4px 24px;
+  margin: 0;
+  width: min(100%, 960px);
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 24px;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  touch-action: pan-x;
+  flex: 1 1 auto;
+}
+
+.media-slider-container {
   position: relative;
+  display: flex;
   align-items: center;
   justify-content: center;
+  gap: clamp(14px, 3vw, 28px);
+  width: min(100%, 960px);
+  margin: 48px auto 64px;
 }
 
-.aktivitet1 img {
-  width: 900px;
-  height: auto;
-  margin: 50px 0px 200px;
+.media-slider-container .media-slider {
+  flex: 1;
 }
 
-.aktivitet2 {
-  display: flex;
-  position: relative;
+.slider-arrow {
+  display: none;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid #bc3039;
+  background: rgba(248, 249, 237, 0.92);
+  color: #bc3039;
+  font-size: 0;
+  line-height: 1;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+  box-shadow: 0 12px 26px rgba(188, 48, 57, 0.25);
+  z-index: 2;
 }
 
-.aktivitet2 img {
-  width: 900px;
-  height: auto;
-  margin: 50px 0px 200px;
+.slider-arrow::before {
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-top: 2px solid currentColor;
+  border-right: 2px solid currentColor;
 }
 
-.aktivitet3 {
+.slider-arrow--prev {
+  left: clamp(-260px, calc((960px - 100vw) / 4), 36px);
+}
+
+.slider-arrow--prev::before {
+  transform: rotate(225deg);
+}
+
+.slider-arrow--next {
+  right: clamp(-260px, calc((960px - 100vw) / 4), 36px);
+}
+
+.slider-arrow--next::before {
+  transform: rotate(45deg);
+}
+
+.slider-arrow:hover:not(:disabled) {
+  transform: translateY(-50%) scale(1.05);
+  background: rgba(124, 157, 210, 0.12);
+  border-color: #7c9dd2;
+  color: #7c9dd2;
+  box-shadow: 0 14px 28px rgba(124, 157, 210, 0.28);
+}
+
+.slider-arrow:active:not(:disabled) {
+  transform: translateY(-50%) scale(0.97);
+}
+
+.slider-arrow:disabled {
+  opacity: 0.3;
+  cursor: default;
+  transform: translateY(-50%);
+}
+
+@media (min-width: 768px) {
+  .media-slider-container {
+    gap: 24px;
+  }
+
+  .slider-arrow {
+    display: inline-flex;
+  }
+
+  .slider-hint {
+    display: none;
+  }
+}
+
+.media-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.media-slide {
+  flex: 0 0 calc(100% - 48px);
   display: flex;
-  position: relative;
-  align-items: center;
   justify-content: center;
+  align-items: center;
+  scroll-snap-align: center;
+  scroll-snap-stop: always;
 }
 
-.aktivitet3 img {
-  width: 900px;
+.media-slide img {
+  width: min(900px, 100%);
   height: auto;
-  margin: 50px 0px 00px;
+  margin: 0;
+  border-radius: 18px;
+  box-shadow: 0 18px 40px rgba(16, 35, 66, 0.16);
+}
+
+.slider-hint {
+  font-family: Bungee Shade, sans-serif;
+  color: #bc3039;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 1px;
+  font-size: 18px;
+  margin: 12px 0 48px;
 }
 
 .top-knap1 {
@@ -367,41 +487,6 @@ p {
   margin-top: 500px;
 }
 
-.restauranter1 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.restauranter1 img {
-  width: 900px;
-  height: auto;
-  margin: 50px 0px 200px;
-}
-
-.restauranter2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.restauranter2 img {
-  width: 900px;
-  height: auto;
-  margin: 50px 0px 200px;
-}
-.restauranter3 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.restauranter3 img {
-  width: 900px;
-  height: auto;
-  margin: 50px 0px 000px;
-}
-
 .top-knap2 {
   display: flex;
   justify-content: center;
@@ -427,43 +512,6 @@ p {
   text-align: center;
   letter-spacing: 1px;
   margin-top: 500px;
-}
-
-.vinbar1 {
-  display: flex;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-}
-
-.vinbar1 img {
-  width: 900px;
-  height: auto;
-  margin: 50px 0px 200px;
-}
-.vinbar2 {
-  display: flex;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-}
-
-.vinbar2 img {
-  width: 900px;
-  height: auto;
-  margin: 50px 0px 200px;
-}
-.vinbar3 {
-  display: flex;
-  position: relative;
-  align-items: center;
-  justify-content: center;
-}
-
-.vinbar3 img {
-  width: 900px;
-  height: auto;
-  margin: 50px 0px 00px;
 }
 
 .top-knap3 {
@@ -607,6 +655,18 @@ p {
    iPhone 16 (≤430px) tweaks
    ========================================= */
 @media (max-width: 430px) {
+  html,
+  body {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+
+  .site-header {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
   header {
     padding: 12px 16px;
     flex-direction: column;
@@ -622,6 +682,12 @@ p {
     flex-direction: column;
     align-items: center;
     gap: 8px;
+  }
+
+  .logo {
+    margin: 0 auto;
+    justify-content: center;
+    text-align: center;
   }
 
   .menu-toggle {
@@ -656,7 +722,6 @@ p {
     will-change: transform, opacity;
   }
 
-
   .site-nav span {
     display: flex;
     justify-content: center;
@@ -690,13 +755,13 @@ p {
     color: #7c9dd2;
   }
 
-  .blaakaffe img {
+  .blaavinglas img {
     height: 48px;
     margin: 12px 0;
   }
 
   .ob-container {
-    margin: 120px auto 48px;
+    margin: 112px auto 56px;
     padding: 0 16px;
     text-align: center;
     display: flex;
@@ -720,61 +785,55 @@ p {
   }
 
   .ob-links {
-    width: 100%;
-    grid-template-columns: 1fr;
-    gap: 10px;
+    display: none;
   }
 
-  .ob-links a {
-    width: 100%;
-    font-size: 20px;
-    padding: 10px 0;
-  }
-
-  .titel-aktiviteter,
-  .titel-restauranter,
-  .titel-vinbar {
-    margin-top: 48px;
-    margin-bottom: 16px;
+  .titel-aktiviteter {
+    margin: 200px 0 20px;
     font-size: clamp(26px, 7vw, 32px);
   }
 
-  .aktivitet1,
-  .aktivitet2,
-  .aktivitet3,
-  .restauranter1,
-  .restauranter2,
-  .restauranter3,
-  .vinbar1,
-  .vinbar2,
-  .vinbar3 {
+  .titel-restauranter,
+  .titel-vinbar {
+    margin: 150px 0 20px;
+    font-size: clamp(26px, 7vw, 32px);
+  }
+
+  .media-slider-container {
+    width: 100%;
+    margin: 20px auto 0;
+    gap: 16px;
+  }
+
+  .media-slider {
+    gap: 24px;
     padding: 0 16px;
   }
 
-  .aktivitet1 img,
-  .aktivitet2 img,
-  .aktivitet3 img,
-  .restauranter1 img,
-  .restauranter2 img,
-  .restauranter3 img,
-  .vinbar1 img,
-  .vinbar2 img,
-  .vinbar3 img {
-    width: 100%;
+  .media-slide {
+    flex: 0 0 calc(100% - 32px);
+  }
+
+  .media-slide img {
     max-width: 360px;
-    margin: 24px 0 72px;
+    width: 100%;
+    box-shadow: 0 14px 30px rgba(16, 35, 66, 0.12);
+  }
+
+  .slider-hint {
+    font-size: 15px;
+    margin: 15px 0 96px;
   }
 
   .top-knap1,
   .top-knap2,
   .top-knap3 {
-    margin: 24px 0 96px;
-    font-size: 16px;
-    padding: 12px 18px;
+    display: none;
   }
 
   .site-footer {
     padding: 28px 16px 40px;
+    margin-top: 500px;
   }
 
   .footer-inner {
